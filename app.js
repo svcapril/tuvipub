@@ -121,16 +121,37 @@ function openPalace(p){
   showTab('detail');
 }
 
+// tứ hóa theo CAN (Lộc,Quyền,Khoa,Kỵ) — trích iztro, khớp 四化 kinh điển
+var TUHOA={
+'Giáp':['Liêm Trinh','Phá Quân','Vũ Khúc','Thái Dương'],
+'Ất':['Thiên Cơ','Thiên Lương','Tử Vi','Thái Âm'],
+'Bính':['Thiên Đồng','Thiên Cơ','Văn Xương','Liêm Trinh'],
+'Đinh':['Thái Âm','Thiên Đồng','Thiên Cơ','Cự Môn'],
+'Mậu':['Tham Lang','Thái Âm','Hữu Bật','Thiên Cơ'],
+'Kỷ':['Vũ Khúc','Tham Lang','Thiên Lương','Văn Khúc'],
+'Canh':['Thái Dương','Vũ Khúc','Thái Âm','Thiên Đồng'],
+'Tân':['Cự Môn','Thái Dương','Văn Khúc','Văn Xương'],
+'Nhâm':['Thiên Lương','Tử Vi','Tả Phù','Vũ Khúc'],
+'Quý':['Phá Quân','Cự Môn','Thái Âm','Tham Lang']
+};
+var NHAN=['Lộc','Quyền','Khoa','Kỵ'];
+
 // đại vận 12 cung
 function renderDecadal(){
-  var h='<table class="dvt"><tr><th>Cung</th><th>Can chi</th><th>Tuổi</th><th>Tứ hóa đại vận</th></tr>';
+  var bornYear=parseInt(G.solarDate.split('-')[0],10);
+  var ageNow=(new Date()).getFullYear()-bornYear+1;
+  var h='<table class="dvt"><tr><th>Cung</th><th>Can chi ĐV</th><th>Tuổi</th><th>Tứ hóa đại vận</th></tr>';
   G.palaces.forEach(function(p){
-    var r=p.decadal&&p.decadal.range?(p.decadal.range[0]+'–'+p.decadal.range[1]):'—';
+    var rg=p.decadal&&p.decadal.range?p.decadal.range:[0,0];
+    var r=(rg[0]+'–'+rg[1]);
     var cc=p.decadal?(p.decadal.heavenlyStem+' '+p.decadal.earthlyBranch):'—';
-    var mu=p.decadal&&p.decadal.mutagen?p.decadal.mutagen.join(', '):'—';
-    h+='<tr><td>'+p.name+'</td><td>'+cc+'</td><td>'+r+'</td><td>'+mu+'</td></tr>';
+    var th=p.decadal?TUHOA[p.decadal.heavenlyStem]:null;
+    var mu='—';
+    if(th){ mu=NHAN.map(function(n,i){return n+': '+th[i];}).join(' · '); }
+    var hot=(ageNow>=rg[0]&&ageNow<=rg[1])?' style="background:#2a2410"':'';
+    h+='<tr'+hot+'><td>'+p.name+(hot?' ⬅':'')+'</td><td>'+cc+'</td><td>'+r+'</td><td>'+mu+'</td></tr>';
   });
-  h+='</table>';
+  h+='</table><div class="note">Bạn hiện '+ageNow+' tuổi, đang ứng đại vận cung có đánh dấu ⬅.</div>';
   $('#tabDv').innerHTML=h;
 }
 
