@@ -66,7 +66,7 @@ function starTag(st){
 }
 
 function renderGrid(){
-  var wrap=$('#grid'); wrap.innerHTML='';
+  var wrap=$('#tabChart'); wrap.innerHTML='';
   // 12 perimeter cells
   G.palaces.forEach(function(p){
     var rp=ringOfBranch(p.earthlyBranch);
