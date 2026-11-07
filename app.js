@@ -3,54 +3,8 @@ var $=function(s,r){return (r||document).querySelector(s);};
 var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));};
 var A=iztro.astro, LANG='vi-VN';
 
-var LUAN={
-'Tử Vi':'Đế tinh: đứng đắn, muốn được nể, hợp làm chủ. Có Tả Hữu phụ tá mới thật quyền; đơn tinh thì danh trước hư sau.',
-'Thiên Cơ':'Máy móc, tính nhanh, đa mưu thiếu quyết, đổi liên tục. Hợp phân tích, cố vấn, kỹ thuật.',
-'Vũ Khúc':'Cứng, thực tế, giỏi tiền, chịu cô độc. Tài đến bằng sức mình, không bằng nịnh.',
-'Thiên Đồng':'Hưởng thụ, né xung đột, cảm xúc dẫn đường. Đủ ăn thì an, thiếu thì than. Kỵ cạnh tranh khốc liệt.',
-'Liêm Trinh':'Sắc, tham quyền, tình và pháp đan xen. Làm lớn phải giữ liêm, không thì dính tai tiếng.',
-'Thiên Phủ':'Cái kho: quản tài giỏi, cầu an, chậm mà chắc, không mạo hiểm. Hợp quản thủ, điều hành.',
-'Thái Dương':'Quang minh, trọng danh, thích thể hiện, bao đồng, hao tài vì thể diện. Nữ cần chồng thành đạt.',
-'Thái Âm':'Tài kín, trực giác tốt, nặng tình gia đình. Nữ hiền đảm giữ của; nam đa tình.',
-'Tham Lang':'Đa dục, ngoại giao, mê hưởng lạc, dễ dính tửu sắc. Có tu thì hóa quyền biến.',
-'Cự Môn':'Khẩu nghiệp, hay nghi, lời sinh chuyện. Cách nghề ăn nói: luật, tư vấn, môi giới. Hóa Lộc thì khẩu nghiệp thành nghiệp kiếm tiền.',
-'Thiên Tướng':'Trọng hình thức, thích làm trọng tài, bao che người dưới, sống vì danh phận.',
-'Thiên Lương':'Thọ, che chở, bênh vực, gánh phần người. Hợp y, giáo dục. Tai qua nạn khỏi nhưng khổ ôm về mình.',
-'Thất Sát':'Quyết liệt, đi thẳng, làm lớn hoặc hỏng lớn. Không chịu nhàn. Hợp lĩnh vực đối đầu.',
-'Phá Quân':'Phá cái cũ mới có cái mới, không ở yên một chỗ. Đời có ít nhất một lần đổi lớn.',
-'Tả Phụ':'Quý nhân phù trợ, được người giúp.',
-'Hữu Bật':'Quý âm phù trợ, kín đáo giúp đỡ.',
-'Văn Xương':'Văn chương, học hành, bằng cấp.',
-'Văn Khúc':'Nghệ thuật, tài hoa, ca nhạc.',
-'Thiên Khôi':'Quý nam giúp.',
-'Thiên Việt':'Quý nữ giúp.',
-'Kình Dương':'Hung燥, thị phi, tai nạn, cô khắc.',
-'Đà La':'Ì ạch, dây dưa, âm ỉ trở ngại.',
-'Hỏa Tinh':'Nóng nảy, đột biến.',
-'Linh Tinh':'Bế tắc, uất ức.',
-'Thiên Mã':'Dịch chuyển, đi lại, thay đổi nơi.',
-'Thoát Thần':'Thoát nạn, di chuyển xa.',
-'Thiên Khốc':'Phiền muộn, khóc.',
-'Thiên Hư':'Hư hao, dở dang.',
-'Tài Tinh':'Tài lộc nhỏ.',
-'Thổ Linh':'Đất cát, mộ trạch.',
-'Tam Thai':'Tăng chức.',
-'Bát Tọa':'Địa vị.',
-'Ân Quang':'Ân điển, quý nhân.',
-'Thiên Quý':'Quý hiển.',
-'Kiếp Sát':'Hao tán, cướp đoạt.',
-'Địa Không':'Không trung gian hư.',
-'Kiếp Sát':'Hao tán, cướp đoạt.',
-'Phượng Các':'Quý hiển, được nể vì.',
-'Tượng_break':'',
-'Kim Thần':'Tai ách.',
-'Thiên Trù':'Lộc trời, ăn lộc.',
-'Phong Cáo':'Sắc phong.',
-'Giải Thần':'Giải tai ách.',
-'Liêm' :'',
-'Phượng Các':'QuÝ hiển.'
-};
-function luanOf(n){ if(LUAN[n]) return LUAN[n]; return null; }
+var LUAN=(window.LUAN)||{};
+function luanOf(n){ return LUAN[n]||null; }
 
 // ring clockwise, Dần at top-left. each [row,col]
 var RING=[['1','1'],['1','2'],['1','3'],['1','4'],['2','4'],['3','4'],['4','4'],['4','3'],['4','2'],['4','1'],['3','1'],['2','1']];
@@ -105,13 +59,25 @@ function renderGrid(){
   wrap.appendChild(mid);
 }
 
+function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function md2html(md){
+  return esc(md).split('\n').map(function(l){
+    var t=l.trim();
+    if(t.indexOf('### ')===0) return '<h5>'+t.slice(4)+'</h5>';
+    if(t.indexOf('## ')===0) return '<h4>'+t.slice(3)+'</h4>';
+    if(t.indexOf('# ')===0) return '<h4>'+t.slice(2)+'</h4>';
+    if(t==='') return '';
+    return '<p>'+t+'</p>';
+  }).join('');
+}
+
 function openPalace(p){
   var b=$('#tabDetail');
   var h='<h3>'+p.name+' · '+p.heavenlyStem+' '+p.earthlyBranch+'</h3>';
   p.majorStars.forEach(function(st){
     var bt=st.brightness?(' ('+st.brightness+')'):'', mg=st.mutagen?(' — hóa '+st.mutagen):'';
     var lu=luanOf(st.name)||('(Độ '+(st.brightness||'?')+': '+'tra độ sáng để biết mạnh yếu; xem tam hợp/xung bên dưới.)');
-    h+='<h4>'+st.name+bt+mg+'</h4>'+lu+'<br>';
+    h+='<div class="luan-block"><h4>'+st.name+bt+mg+'</h4>'+md2html(lu)+'</div>';
   });
   // tam hợp / xung
   var i=p.index, th=[G.palaces[(i+4)%12],G.palaces[(i+8)%12]], xk=G.palaces[(i+6)%12];
