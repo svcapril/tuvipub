@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Lập lá số Tử Vi Đẩu Số miễn phí, 12 cung + tứ hóa, tính chính xác theo phái Việt.">
+<meta name="description" content="Lập lá số Tử Vi Đẩu Số miễn phí: 12 cung + tứ hóa, tính chính xác, không đăng ký.">
 <title>Lá số Tử Vi — lập nhanh, có căn cứ</title>
 <style>
 :root{--bg:#0e0f13;--card:#17191f;--fg:#e9e9ef;--mut:#8e8e99;--ac:#e0b64d;--warn:#e05d5d}
@@ -16,24 +16,25 @@ form{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 label{font-size:12px;color:var(--mut);display:block;margin-bottom:4px}
 input,select{width:100%;padding:10px;border-radius:8px;border:1px solid #2b2e36;background:#101216;color:var(--fg)}
 button{grid-column:span 4;padding:12px;border:0;border-radius:8px;background:var(--ac);color:#1a1405;font-weight:700;cursor:pointer}
-.meta{margin:16px 0;color:var(--ac);font-weight:600}
+.meta{margin:16px 0 6px;color:var(--ac);font-weight:600}
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
-.cell{background:var(--card);border:1px solid #26292f;border-radius:7px;padding:7px;min-height:120px}
+.cell{background:var(--card);border:1px solid #26292f;border-radius:7px;padding:7px;min-height:118px}
 .cell h4{margin:0 0 3px;font-size:12px;color:var(--ac)}
-.cell .st{font-size:12.3px}
-.cell .mu{color:var(--warn);font-size:11.5px;font-weight:600}
+.cell .st{font-size:12.4px}
+.cell .mu{color:var(--warn);font-weight:600}
 .cell .min{color:var(--mut);font-size:11px}
-.luan{margin-top:20px}
-.luan .it{margin:0 0 10px;padding:11px;background:var(--card);border-radius:8px}
+.luan{margin-top:18px}
+.luan .it{margin:0 0 9px;padding:11px;background:var(--card);border-radius:8px}
 .luan .it b{color:var(--ac)}
 .err{color:var(--warn)}
-@media(max-width:760px){form{grid-template-columns:repeat(2,1fr)}button{grid-column:span 2}.grid{grid-template-columns:repeat(2,1fr)}}
+.foot{margin-top:22px;color:var(--mut);font-size:12px}
+@media(max-width:760px){form,.grid{grid-template-columns:repeat(2,1fr)}button{grid-column:span 2}}
 </style>
 </head>
 <body>
 <div class="wrap">
 <h1>Lá số Tử Vi</h1>
-<p class="sub">Nhập ngày giờ sinh (dương lịch). An tinh đẩu số 12 cung + tứ hóa năm. Không đăng ký, không phí.</p>
+<p class="sub">Nhập ngày giờ sinh (dương lịch) → an tinh đẩu số 12 cung + tứ hóa năm nay. Không đăng ký, không phí.</p>
 <form id="f">
   <div><label>Họ tên (tuỳ chọn)</label><input id="name" placeholder="vd Nguyễn Văn A"></div>
   <div><label>Ngày sinh (dương)</label><input id="d" type="date" required></div>
@@ -42,52 +43,43 @@ button{grid-column:span 4;padding:12px;border:0;border-radius:8px;background:var
   <button type="submit">An sao — xem lá số</button>
 </form>
 <div id="out"></div>
+<div class="foot">Kết quả do máy an theo quy tắc cố định của Tử Vi Đẩu Số, phần luận mang tính tham khảo.</div>
 </div>
 <script src="iztro.min.js"></script>
 <script>
-const $=q=>document.querySelector(q);
-const A=iztro.astro;
-const VN={'紫微':'Tử Vi','天机':'Thiên Cơ','太阳':'Thái Dương','武曲':'Vũ Khúc','天同':'Thiên Đồng','廉贞':'Liêm Trinh','天府':'Thiên Phủ','太阴':'太阴','贪狼':'Tham Lang','巨门':'Cự Môn','天相':'Thiên Tướng','天梁':'Thiên Lương','七杀':'Thất Sát','左辅':'Tả Phù','右弼':'Hữu Bật','文昌':'Văn Xương','文曲':'Văn Khúc','禄存':'Lộc Tồn','天钺':'Thiên Việt','天魁':'Thiên Khôi','擎羊':'Kình Dương','陀罗':'Đà La','火星':'Hỏa Tinh','铃星':'Linh Tinh','地空':'Địa Không','地劫':'Địa Kiếp','天马':'Thiên Mã','红鸾':'Hồng Loan','天喜':'Thiên Hỷ','咸池':'Hàm Trì','天姚':'Thiên Dao','孤辰':'Cô Thần','寡宿':'Quả Tú','天刑':'Thiên Hình','华盖':'Hoa Cái','天哭':'Thiên Khốc','天伤':'Thiên Thương','恩光':'Ân Quang','天贵':'Thiên Quý','三台':'Tam Đài','八座':'Bát Tọa','龙池':'Long Trì','凤阁':'Phượng Các','天官':'Thiên Quan','天福':'Thiên Phúc','截路':'Triệt','旬空':'Tuần Không','天巫':'Thiên Vu','天空':'Thiên Không','劫杀':'Kiếp Sát','天厄':'Thiên Ách','阴煞':'Âm Sát','天月':'Thiên Nguyệt','解神':'Giải Thần','破碎':'Phá Toái','大耗':'Đại Hao','小耗':'Tiểu Hao','龙德':'Long Đức','白虎':'Bạch Hổ','丧门':'Tang Môn','贯索':'Quán Sách','官符':'Quan Phù','小耗':'Tiểu Hao'};
-const v=n=>VN[n]||n;
+const $=q=>document.querySelector(q), A=iztro.astro, LANG='vi-VN';
 const HO=['Tý (23–01)','Sửu (01–03)','Dần (03–05)','Mão (05–07)','Thìn (07–09)','Tỵ (09–11)','Ngọ (11–13)','Mùi (13–15)','Thân (15–17)','Dậu (17–19)','Tuất (19–21)','Hợi (21–23)'];
 $('#h').innerHTML=HO.map((t,i)=>`<option value="${i}"${i==7?' selected':''}>${t}</option>`).join('');
 
-function starsOf(p){
-  const m=p.majorStars.map(s=>`<b>${v(s.name)}</b>${s.brightness?' ('+v(s.brightness)+')':''}${s.mutagen?' <span class="mu">'+v(s.mutagen)+'</span>':''}`).join(', ');
-  const mi=p.minorStars.map(s=>v(s.name)+(s.mutagen?'<span class="mu">'+v(s.mutagen)+'</span>':'')).join(', ');
-  const ad=p.adjectiveStars.map(s=>v(s.name)).join(', ');
-  let s='';
-  if(m) s+=`<div class="st">${m}</div>`;
-  if(mi) s+=`<div class="min">${mi}</div>`;
-  if(ad) s+=`<div class="min">${ad}</div>`;
-  return s;
-}
-function luanLap(a){
-  // luận ngắn: Mệnh/Thân vô chính diệu -> mượn; tứ hóa năm đóng cung nào
-  const o=[];
-  const menh=a.palaces.find(p=>p.name==='命宫');
-  const than=a.palaces.find(p=>a.palaces.indexOf(p)===['命','兄弟','夫妻','子女','财帛','疾厄','迁移','交友','官禄','田宅','福德','父母'].indexOf(p.name) );
-  o.push({t:'Mệnh chủ',c:'<b>'+v(a.soul.name)+'</b> — Mệnh lập tại cung <b>'+a.earthlyBranchOfSoulPalace+'</b>, Cục '+v(a.fiveElementsClass)+'.'});
-  o.push({t:'Thân cư',c:'Thân lập tại cung <b>'+a.earthlyBranchOfBodyPalace+'</b>. Đây là chỗ chi phối trạng thái về sau của lá số.'});
-  // tứ hóa năm
-  try{
-    const y=a.horoscope(new Date().getFullYear()+'-06-01',+$('#h').value);
-    const th=y.yearly.mutagen||[];
-    const map=[];
-    (y.yearly.stars||[]).forEach((ss,i)=>{ss.forEach(s=>{if(th.includes(s.name)) map.push(v(s.name)+' hóa '+v(s.mutagen||'')+' → cung '+a.palaces[i].name+' ('+a.palaces[i].earthlyBranch+')');});});
-    if(map.length) o.push({t:'Tứ hóa năm '+new Date().getFullYear(),c:map.join('<br>')});
-  }catch(e){}
-  return o;
+function cell(p){
+  const m=p.majorStars.map(s=>'<b>'+s.name+'</b>'+(s.brightness?' ('+s.brightness+')':'')+(s.mutagen?' <span class="mu">'+s.mutagen+'</span>':'')).join(', ');
+  const mi=p.minorStars.map(s=>s.name+(s.mutagen?' <span class="mu">'+s.mutagen+'</span>':'')).join(', ');
+  const ad=p.adjectiveStars.map(s=>s.name).join(', ');
+  let h='<h4>'+p.name+' · '+p.heavenlyStem+p.earthlyBranch+(p.isBodyPalace?' [Thân]':'')+'</h4>';
+  if(m) h+='<div class="st">'+m+'</div>';
+  if(mi) h+='<div class="min">'+mi+'</div>';
+  if(ad) h+='<div class="min">'+ad+'</div>';
+  return h;
 }
 $('#f').addEventListener('submit',e=>{
   e.preventDefault();
   try{
-    const a=A.bySolar($('#d').value,+$('#h').value,$('#g').value,true);
-    let h=`<div class="meta">${$('#name').value?$('#name').value+' — ':''}${a.chineseDate} · ${a.time} · ${v(a.zodiac)} cung ${v(a.sign)}</div>`;
-    h+='<div class="grid">'+a.palaces.map(p=>`<div class="cell"><h4>${v(p.name)} · ${p.heavenlyStem}${p.earthlyBranch}${p.isBodyPalace?' [Thân]':''}</h4>${starsOf(p)}</div>`).join('')+'</div>';
-    h+='<div class="luan">'+luanLap(a).map(x=>`<div class="it"><b>${x.t}.</b> ${x.c}</div>`).join('')+'</div>';
+    const hi=+$('#h').value;
+    const a=A.bySolar($('#d').value,hi,$('#g').value,true,LANG);
+    let h='<div class="meta">'+($('#name').value?$('#name').value+' — ':'')+a.solarDate+' ('+a.chineseDate+') · '+a.time+' · '+a.zodiac+', '+a.sign+', '+a.fiveElementsClass+'</div>';
+    h+='<div class="grid">'+a.palaces.map(cell).join('')+'</div>';
+    // tứ hóa năm nay
+    const y=A.bySolar($('#d').value,hi,$('#g').value,true,LANG).horoscope(new Date().toISOString().slice(0,10),hi,LANG);
+    const rows=[];
+    (y.yearly.stars||[]).forEach((ss,i)=>ss.forEach(s=>{if(s.mutagen) rows.push(s.name+' hóa '+s.mutagen+' → cung '+a.palaces[i].name+' ('+a.palaces[i].earthlyBranch+')');}));
+    h+='<div class="luan"><div class="it"><b>Tứ hóa năm '+new Date().getFullYear()+':</b><br>'+(rows.join('<br>')||'—')+'</div>';
+    const md=a.palaces.find(p=>p.name==='Mệnh');
+    if(md.majorStars.length===0) h+='<div class="it"><b>Mệnh vô chính diệu:</b> mượn chính tinh cung Thiên Di ('+a.palaces.find(p=>p.name==='Thiên Di').majorStars.map(s=>s.name).join(', ')+') — mềm, dễ bị hoàn cảnh kéo, cần quý nhân.</div>';
+    h+='</div>';
     $('#out').innerHTML=h;
-  }catch(err){$('#out').innerHTML=`<p class="err">Lỗi: ${err.message}</p>`}
+    // scroll to result
+    $('#out').scrollIntoView({behavior:'smooth'});
+  }catch(err){$('#out').innerHTML='<p class="err">Lỗi: '+err.message+'</p>';}
 });
 </script>
 </body>
