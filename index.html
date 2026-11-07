@@ -46,6 +46,7 @@ button{grid-column:span 4;padding:12px;border:0;border-radius:8px;background:var
 <script src="iztro.min.js"></script>
 <script>
 const $=q=>document.querySelector(q);
+const A=iztro.astro;
 const VN={'紫微':'Tử Vi','天机':'Thiên Cơ','太阳':'Thái Dương','武曲':'Vũ Khúc','天同':'Thiên Đồng','廉贞':'Liêm Trinh','天府':'Thiên Phủ','太阴':'太阴','贪狼':'Tham Lang','巨门':'Cự Môn','天相':'Thiên Tướng','天梁':'Thiên Lương','七杀':'Thất Sát','左辅':'Tả Phù','右弼':'Hữu Bật','文昌':'Văn Xương','文曲':'Văn Khúc','禄存':'Lộc Tồn','天钺':'Thiên Việt','天魁':'Thiên Khôi','擎羊':'Kình Dương','陀罗':'Đà La','火星':'Hỏa Tinh','铃星':'Linh Tinh','地空':'Địa Không','地劫':'Địa Kiếp','天马':'Thiên Mã','红鸾':'Hồng Loan','天喜':'Thiên Hỷ','咸池':'Hàm Trì','天姚':'Thiên Dao','孤辰':'Cô Thần','寡宿':'Quả Tú','天刑':'Thiên Hình','华盖':'Hoa Cái','天哭':'Thiên Khốc','天伤':'Thiên Thương','恩光':'Ân Quang','天贵':'Thiên Quý','三台':'Tam Đài','八座':'Bát Tọa','龙池':'Long Trì','凤阁':'Phượng Các','天官':'Thiên Quan','天福':'Thiên Phúc','截路':'Triệt','旬空':'Tuần Không','天巫':'Thiên Vu','天空':'Thiên Không','劫杀':'Kiếp Sát','天厄':'Thiên Ách','阴煞':'Âm Sát','天月':'Thiên Nguyệt','解神':'Giải Thần','破碎':'Phá Toái','大耗':'Đại Hao','小耗':'Tiểu Hao','龙德':'Long Đức','白虎':'Bạch Hổ','丧门':'Tang Môn','贯索':'Quán Sách','官符':'Quan Phù','小耗':'Tiểu Hao'};
 const v=n=>VN[n]||n;
 const HO=['Tý (23–01)','Sửu (01–03)','Dần (03–05)','Mão (05–07)','Thìn (07–09)','Tỵ (09–11)','Ngọ (11–13)','Mùi (13–15)','Thân (15–17)','Dậu (17–19)','Tuất (19–21)','Hợi (21–23)'];
@@ -81,7 +82,7 @@ function luanLap(a){
 $('#f').addEventListener('submit',e=>{
   e.preventDefault();
   try{
-    const a=astro.bySolar($('#d').value,+$('#h').value,$('#g').value,true);
+    const a=A.bySolar($('#d').value,+$('#h').value,$('#g').value,true);
     let h=`<div class="meta">${$('#name').value?$('#name').value+' — ':''}${a.chineseDate} · ${a.time} · ${v(a.zodiac)} cung ${v(a.sign)}</div>`;
     h+='<div class="grid">'+a.palaces.map(p=>`<div class="cell"><h4>${v(p.name)} · ${p.heavenlyStem}${p.earthlyBranch}${p.isBodyPalace?' [Thân]':''}</h4>${starsOf(p)}</div>`).join('')+'</div>';
     h+='<div class="luan">'+luanLap(a).map(x=>`<div class="it"><b>${x.t}.</b> ${x.c}</div>`).join('')+'</div>';
