@@ -3,84 +3,41 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Lập lá số Tử Vi Đẩu Số miễn phí: 12 cung + tứ hóa, tính chính xác, không đăng ký.">
-<title>Lá số Tử Vi — lập nhanh, có căn cứ</title>
-<style>
-:root{--bg:#0e0f13;--card:#17191f;--fg:#e9e9ef;--mut:#8e8e99;--ac:#e0b64d;--warn:#e05d5d}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-.wrap{max-width:1000px;margin:0 auto;padding:18px}
-h1{font-size:23px;margin:0 0 3px}
-.sub{color:var(--mut);margin:0 0 16px}
-form{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-label{font-size:12px;color:var(--mut);display:block;margin-bottom:4px}
-input,select{width:100%;padding:10px;border-radius:8px;border:1px solid #2b2e36;background:#101216;color:var(--fg)}
-button{grid-column:span 4;padding:12px;border:0;border-radius:8px;background:var(--ac);color:#1a1405;font-weight:700;cursor:pointer}
-.meta{margin:16px 0 6px;color:var(--ac);font-weight:600}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
-.cell{background:var(--card);border:1px solid #26292f;border-radius:7px;padding:7px;min-height:118px}
-.cell h4{margin:0 0 3px;font-size:12px;color:var(--ac)}
-.cell .st{font-size:12.4px}
-.cell .mu{color:var(--warn);font-weight:600}
-.cell .min{color:var(--mut);font-size:11px}
-.luan{margin-top:18px}
-.luan .it{margin:0 0 9px;padding:11px;background:var(--card);border-radius:8px}
-.luan .it b{color:var(--ac)}
-.err{color:var(--warn)}
-.foot{margin-top:22px;color:var(--mut);font-size:12px}
-@media(max-width:760px){form,.grid{grid-template-columns:repeat(2,1fr)}button{grid-column:span 2}}
-</style>
+<title>Lá số Tử Vi — lập chi tiết, miễn phí</title>
+<link rel="stylesheet" href="app.css">
 </head>
 <body>
-<div class="wrap">
-<h1>Lá số Tử Vi</h1>
-<p class="sub">Nhập ngày giờ sinh (dương lịch) → an tinh đẩu số 12 cung + tứ hóa năm nay. Không đăng ký, không phí.</p>
-<form id="f">
-  <div><label>Họ tên (tuỳ chọn)</label><input id="name" placeholder="vd Nguyễn Văn A"></div>
-  <div><label>Ngày sinh (dương)</label><input id="d" type="date" required></div>
-  <div><label>Giờ sinh</label><select id="h"></select></div>
-  <div><label>Giới tính</label><select id="g"><option value="male">Nam</option><option value="female">Nữ</option></select></div>
-  <button type="submit">An sao — xem lá số</button>
-</form>
-<div id="out"></div>
-<div class="foot">Kết quả do máy an theo quy tắc cố định của Tử Vi Đẩu Số, phần luận mang tính tham khảo.</div>
-</div>
-<script src="iztro.min.js"></script>
-<script>
-const $=q=>document.querySelector(q), A=iztro.astro, LANG='vi-VN';
-const HO=['Tý (23–01)','Sửu (01–03)','Dần (03–05)','Mão (05–07)','Thìn (07–09)','Tỵ (09–11)','Ngọ (11–13)','Mùi (13–15)','Thân (15–17)','Dậu (17–19)','Tuất (19–21)','Hợi (21–23)'];
-$('#h').innerHTML=HO.map((t,i)=>`<option value="${i}"${i==7?' selected':''}>${t}</option>`).join('');
+<header>
+  <h1>Lá số Tử Vi Đẩu Số</h1>
+  <p class="tag">Nhập ngày giờ sinh → lá số 12 cung đủ sao, tứ hóa, đại vận, luận giải. Miễn phí.</p>
+  <form id="f">
+    <label>Ngày sinh (DL)<input id="d" type="date" required></label>
+    <label>Giờ
+      <select id="h"></select>
+    </label>
+    <label>Giới
+      <select id="g">
+        <option value="male">Nam</option>
+        <option value="female">Nữ</option>
+      </select>
+    </label>
+    <button type="submit">Lập lá số</button>
+    <span class="err" id="err"></span>
+  </form>
+</header>
 
-function cell(p){
-  const m=p.majorStars.map(s=>'<b>'+s.name+'</b>'+(s.brightness?' ('+s.brightness+')':'')+(s.mutagen?' <span class="mu">'+s.mutagen+'</span>':'')).join(', ');
-  const mi=p.minorStars.map(s=>s.name+(s.mutagen?' <span class="mu">'+s.mutagen+'</span>':'')).join(', ');
-  const ad=p.adjectiveStars.map(s=>s.name).join(', ');
-  let h='<h4>'+p.name+' · '+p.heavenlyStem+p.earthlyBranch+(p.isBodyPalace?' [Thân]':'')+'</h4>';
-  if(m) h+='<div class="st">'+m+'</div>';
-  if(mi) h+='<div class="min">'+mi+'</div>';
-  if(ad) h+='<div class="min">'+ad+'</div>';
-  return h;
-}
-$('#f').addEventListener('submit',e=>{
-  e.preventDefault();
-  try{
-    const hi=+$('#h').value;
-    const a=A.bySolar($('#d').value,hi,$('#g').value,true,LANG);
-    let h='<div class="meta">'+($('#name').value?$('#name').value+' — ':'')+a.solarDate+' ('+a.chineseDate+') · '+a.time+' · '+a.zodiac+', '+a.sign+', '+a.fiveElementsClass+'</div>';
-    h+='<div class="grid">'+a.palaces.map(cell).join('')+'</div>';
-    // tứ hóa năm nay
-    const y=A.bySolar($('#d').value,hi,$('#g').value,true,LANG).horoscope(new Date().toISOString().slice(0,10),hi,LANG);
-    const rows=[];
-    (y.yearly.stars||[]).forEach((ss,i)=>ss.forEach(s=>{if(s.mutagen) rows.push(s.name+' hóa '+s.mutagen+' → cung '+a.palaces[i].name+' ('+a.palaces[i].earthlyBranch+')');}));
-    h+='<div class="luan"><div class="it"><b>Tứ hóa năm '+new Date().getFullYear()+':</b><br>'+(rows.join('<br>')||'—')+'</div>';
-    const md=a.palaces.find(p=>p.name==='Mệnh');
-    if(md.majorStars.length===0) h+='<div class="it"><b>Mệnh vô chính diệu:</b> mượn chính tinh cung Thiên Di ('+a.palaces.find(p=>p.name==='Thiên Di').majorStars.map(s=>s.name).join(', ')+') — mềm, dễ bị hoàn cảnh kéo, cần quý nhân.</div>';
-    h+='</div>';
-    $('#out').innerHTML=h;
-    // scroll to result
-    $('#out').scrollIntoView({behavior:'smooth'});
-  }catch(err){$('#out').innerHTML='<p class="err">Lỗi: '+err.message+'</p>';}
-});
-</script>
+<div id="out" hidden>
+  <div class="tabs">
+    <button class="tabbtn on" data-tab="chart">Lá số 12 cung</button>
+    <button class="tabbtn" data-tab="detail">Luận giải cung chọn</button>
+    <button class="tabbtn" data-tab="dv">Đại vận 12 cung</button>
+  </div>
+  <div id="tabChart" class="grid"></div>
+  <div id="tabDetail" class="detail" style="display:none"></div>
+  <div id="tabDv" class="dv" style="display:none"></div>
+</div>
+
+<script src="iztro.min.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

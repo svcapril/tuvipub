@@ -1,0 +1,56 @@
+We need answer in Vietnamese. Need satisfy user: detailed Tử Vi Đẩu Số when Vũ Khúc thủ Mệnh, chiếu cả tam hợp xung chiếu. Vietnamese diacritics, each section 3-5 sentences, total 1400-1800 words. Must use headings exactly ##. Need terse caveman? System says respond like terse caveman, but user asks detailed 1400-1800 words. Conflict? Developer lazy? Need likely obey user structure and length, but style terse? We can be concise but need 1400-1800 words. Need ensure each section 3-5 sentences. There are 9 headings. If each 3-5 sentences, total 27-45 sentences. Need 1400-1800 words. Vietnamese words? Need count maybe around 1500. We can write 9 sections, each 4 sentences, long sentences. Need total 1400-1800 words. Must be Vietnamese. Need technical substance exact. Need avoid fluff? But length. Need no decorative emoji. Need not announce style.
+
+Need think Tử Vi: Vũ Khúc is Bắc Đẩu tinh, tài tinh, kim tinh, chủ tài, cô khắc, tính cương nghị, quyết đoán, trọng nghĩa, thực tế, lạnh lùng, cô độc, khắc vợ con, nếu miếu vượng (Thìn Tuất Sửu Mùi? Vũ Khúc nhập tứ mộ? Actually Vũ Khúc miếu ở Sửu Mùi? Let's recall: Vũ Khúc miếu ở Sửu Mùi? Need accurate. Vũ Khúc thủ Mệnh: thường ở Thìn Tuất Sửu Mùi? Let's check memory: Vũ Khúc: Bắc Đẩu đệ ngũ tinh, hóa khí là tài, thuộc Kim, tính cương nghị, cô khắc. Nhập miếu ở Sửu Mùi? Maybe miếu ở Sửu Mùi, vượng ở Dần Thân? Let's recall Tử Vi: Vũ Khúc nhập miếu ở Sửu Mùi (Thiên Phủ đồng cung? Actually Vũ Khúc Thiên Phủ ở Sửu Mùi? Vũ Khúc Thiên Phủ đồng cung ở Sửu Mùi? Yes Vũ Khúc Thiên Phủ đồng cung ở Sửu Mùi? Let's map: Tử Vi ở Thìn Tuất? Vũ Khúc? Need maybe: Vũ Khúc miếu ở Sửu Mùi, đắc địa ở Dần Thân? Hãm ở Tý Ngọ Mão Dậu? Hmm.
+
+Need discuss tam hợp xung chiếu: Mệnh có Vũ Khúc, tam hợp (Mệnh-Tài-Quan) and xung chiếu (Di?) maybe all chiếu. If Vũ Khúc thủ Mệnh then cung Tài/Quan? In Tử Vi, Mệnh, Tài, Quan tam hợp. If Vũ Khúc thủ Mệnh, depending cung, Tài Quan may have other stars. User says "chiếu cả tam hợp xung chiếu" maybe means Vũ Khúc thủ Mệnh and also chiếu through tam hợp/xung? Actually a star in Mệnh can't chiếu itself? Maybe they mean lá số when Vũ Khúc thủ Mệnh, and in tam hợp/xung chiếu also có Vũ Khúc? That impossible unless same star in Mệnh and other cung? In Tử Vi each star placed one cung, but can be chiếu from other cung. "Vũ Khúc thủ Mệnh (chiếu cả tam hợp xung chiếu)" maybe means Vũ Khúc sits in Mệnh and its tam hợp/xung chiếu? Need interpret: Vũ Khúc thủ Mệnh, luận cả tam hợp (Tài, Quan) and xung chiếu (Di). Could say Vũ Khúc thủ Mệnh thì tam hợp Tài Quan thường có Thiên Phủ/Tan Lang? Need know.
+
+Need maybe include cách cục: Vũ Khúc Thiên Phủ, Vũ Khúc Tham Lang, Vũ Khúc Phá Quân, Vũ Khúc Liêm Trinh? Let's recall placements:
+Tử Vi system: 14 chính tinh. Vũ Khúc can sit with Thiên Phủ (Sửu Mùi), with Tham Lang (Dần Thân? Actually Vũ Khúc Tham Lang đồng cung ở Dần Thân?), with Phá Quân (Tý Ngọ?), with Liêm Trinh (Thìn Tuất?). Need verify.
+
+Let's recall 14 stars distribution:
+- Tử Vi Thiên Cơ ở Dần Thân? Hmm.
+Maybe easier: Main combinations involving Vũ Khúc: Vũ Khúc Thiên Phủ (Sửu Mùi), Vũ Khúc Tham Lang (Dần Thân), Vũ Khúc Phá Quân (Tý Ngọ), Vũ Khúc Liêm Trinh (Thìn Tuất). Yes likely.
+
+Need discuss miếu/vượng vs hãm: Vũ Khúc miếu ở Sửu Mùi (Thiên Phủ), vượng? maybe Dần Thân? hãm? Tý Ngọ Mão Dậu? Need be careful. In many texts: Vũ Khúc nhập miếu ở Sửu Mùi, đắc địa ở Dần Thân, hãm địa ở Tý Ngọ Mão Dậu? Maybe Thìn Tuất? Let's search memory: Vũ Khúc: miếu ở Sửu Mùi, vượng ở Dần Thân, đắc ở Thìn Tuất? Hmm.
+
+Could avoid exact map? User wants phân biệt miếu/vượng vs hãm. We can say: nếu Vũ Khúc ở Sửu Mùi (miếu) or Dần Thân (vượng/đắc) then... if Tý Ngọ Mão Dậu (hãm) then... Need not exhaustive.
+
+Need include Hóa Lộc/Lộc Tồn? Vũ Khúc is tài tinh, gặp Lộc Tồn/Hóa Lộc then giàu. Gặp Kình Dương/Đà La/Địa Không/Địa Kiếp then tài bị phá. Vũ Khúc + Lộc: Vũ Khúc Lộc Tồn? "Vũ Khúc Lộc Tồn" cách đại phú? There is "Vũ Khúc Lộc Tồn" or "Vũ Khúc Hóa Lộc" cách. Also "Vũ Khúc Phá Quân" bần tiện? "Vũ Khúc Liêm Trinh" khắc hình? Need mention.
+
+Need total 1400-1800 words. Need each section 3-5 sentences. If 9 sections * 4 sentences = 36 sentences. Need average 45 words per sentence = 1620. Vietnamese words? Could be long. Need maybe 9 sections, 4 sentences each, each sentence ~40-50 words. That's 1440-1800. Need ensure each section 3-5 sentences: exactly 4. Need count approximate. Need not too terse? But system says terse caveman. We can use concise but long enough. Maybe avoid filler but detailed. Need Vietnamese. Need no English? Could include terms. Need headings exactly. Need maybe count words. Let's draft with 9 sections, 4 sentences each. Need total ~1500 Vietnamese words. Let's estimate. Vietnamese word counting by spaces. Need maybe 1500. We'll write long sentences. Need ensure each heading section has 4 sentences (periods). Could count manually approximate. Need maybe use semicolons? Sentence count by periods? If semicolon maybe not. Need each section 3-5 sentences. Use periods only. Need avoid abbreviations with periods? avoid e.g. etc. Use no ellipsis? Could use semicolon but not count. Need 4 sentences per section.
+
+Need maybe include "## Tổng luận" then 4 sentences. Need total 9 sections = 36 sentences. Need 1400-1800 words. Average 39-50 words per sentence. Manageable. Need ensure no extra headings. Need final only answer. Need maybe count words? Let's draft and count roughly. I can manually count? Need high accuracy. We can produce ~1500. Let's construct each section with 4 sentences, each around 45 words. 36*45=1620. Good.
+
+Need include technical substance: Vũ Khúc is Bắc Đẩu, Kim, tài tinh, chủ tài, tính cương nghị, trọng nghĩa, quyết đoán, lạnh, cô khắc. Mệnh Vũ Khúc: tự lập, tài cán, quản lý tài chính, kinh doanh, kỷ luật. Miếu vượng: Sửu Mùi (Thiên Phủ) or Dần Thân? Need maybe say "Sửu Mùi miếu, Dần Thân vượng/đắc". Hãm: Tý Ngọ Mão Dậu? Need maybe Thìn Tuất? Let's check: Vũ Khúc Liêm Trinh Thìn Tuất? Thìn Tuất maybe not hãm? If Vũ Khúc ở Thìn Tuất with Liêm Trinh? Thìn Tuất là Thiên La Địa Võng? Maybe hãm? Need maybe say "Thìn Tuất cũng thuộc vùng gò bó Thiên La Địa Võng, nếu không có Lộc giải thì tài khó tụ". But user wants miếu/vượng vs hãm. Could say miếu: Sửu Mùi; vượng/đắc: Dần Thân, Thìn Tuất? hãm: Tý Ngọ Mão Dậu? Need not overclaim.
+
+Let's maybe phrase: "Vũ Khúc thường lấy Sửu Mùi là miếu, Dần Thân là vượng/đắc, Tý Ngọ Mão Dậu là hãm, Thìn Tuất thuộc vùng Thiên La Địa Võng nên phải xem Lộc Tồn, Hóa Lộc, Thiên Phủ, Thiên Tướng mới định cát hung." This is safe-ish.
+
+Need discuss tam hợp: Mệnh-Tài-Quan. If Vũ Khúc thủ Mệnh, tam hợp Tài Quan thường có Thiên Phủ/Tham Lang/Phá Quân/Liêm Trinh? Need maybe not exact. Could say: "Tam hợp Mệnh-Tài-Quan nếu có Thiên Phủ, Lộc Tồn, Hóa Lộc thì tài tinh có kho, dễ thành nghiệp; nếu gặp Phá Quân, Địa Kiếp, Địa Không, Kình Đà thì tài đến tài đi." Need mention xung chiếu (Thiên Di): "Xung chiếu từ Di nếu có Thiên Phủ/Lộc thì ra ngoài gặp quý, nếu có Sát tinh thì thị phi, hao tán." Need maybe.
+
+Need each section:
+## Tổng luận: 4 sentences.
+## Tính cách: 4.
+## Sự nghiệp: 4.
+## Tài lộc: 4.
+## Tình duyên - hôn nhân: 4.
+## Sức khỏe: 4.
+## Lục thân (Phụ Mẫu - Huynh Đệ - Phu Thê - Tử Tức): 4.
+## Thiên Di - Nô Bộc - Điền Trạch - Phúc Đức: 4.
+## Lời khuyên: 4.
+
+Need total 1400-1800. Need maybe count. Let's draft with long sentences. Need maybe Vietnamese word count. Let's do one by one and count approximate. Could use internal counting. Let's write final with no extra text. Need ensure no headings beyond ##. Need maybe each sentence not too short. Need no bullet? Headings and paragraphs. Could use line breaks. Each section 4 sentences. Need maybe count with spaces. Let's draft and manually count? We can approximate but need within range. Need maybe use word count mentally. Could produce 1600. Let's create 9*4 sentences each ~45 words. Need count maybe. Let's draft in analysis and count.
+
+I'll write in Vietnamese. Need maybe use punctuation: periods. Vietnamese words count by spaces. Hyphen? avoid hyphen maybe. Use "Tài - Quan"? Could count as words? Better avoid slash/hyphen? User heading has hyphen. In text, use "Tài Quan" or "Tài, Quan". Need count maybe.
+
+Let's draft:
+
+## Tổng luận
+Sentence1: "Vũ Khúc là Bắc Đẩu tinh, thuộc Kim, hóa khí là Tài, chủ về tiền bạc, kho lẫm, kỷ luật tài chính, sức chịu đựng, tính quyết đoán và sự tự lập, nên khi thủ Mệnh thì đương số thường sớm hiểu thực tế, trọng nghĩa, không thích sống bám vào người khác." Count? Let's count: Vũ(1) Khúc2 là3 Bắc4 Đẩu5 tinh6 thuộc7 Kim8 hóa9 khí10 là11 Tài12 chủ13 về14 tiền15 bạc16 kho17 lẫm18 kỷ19 luật20 tài21 chính22 sức23 chịu24 đựng25 tính26 quyết27 đoán28 và29 sự30 tự31 lập32 nên33 khi34 thủ35 Mệnh36 thì37 đương38 số39 thường40 sớm41 hiểu42 thực43 tế44 trọng45 nghĩa46 không47 thích48 sống49 bám50 vào51 người52 khác53. 53 words.
+Sentence2: "Nếu Vũ Khúc ở Sửu Mùi là miếu, hoặc Dần Thân là vượng, lại có Thiên Phủ, Lộc Tồn, Hóa Lộc, Thiên Mã, Thiên Tướng, Thiên Đồng thì tài tinh có kho có đường, dễ làm ra tiền, giữ tiền, có thể thành nghiệp từ kinh doanh, quản lý, tài chính, bất động sản hoặc ngành kim khí." Count: Nếu1 Vũ2 Khúc3 ở4 Sửu5 Mùi6 là7 miếu8 hoặc9 Dần10 Thân11 là12 vượng13 lại14 có15 Thiên16 Phủ17 Lộc18 Tồn19 Hóa20 Lộc21 Thiên22 Mã23 Thiên24 Tướng25 Thiên26 Đồng27 thì28 tài29 tinh30 có31 kho32 có33 đường34 dễ35 làm36 ra37 tiền38 giữ39 tiền40 có41 thể42 thành43 nghiệp44 từ45 kinh46 doanh47 quản48 lý49 tài50 chính51 bất52 động53 sản54 hoặc55 ngành56 kim57 khí58. 58.
+Sentence3: "Nếu Vũ Khúc hãm ở Tý Ngọ Mão Dậu, hoặc rơi vào Thìn Tuất thuộc Thiên La Địa Võng mà gặp Kình Dương, Đà La, Hỏa Tinh, Linh Tinh, Địa Không, Địa Kiếp, Thiên Hình, Thiên Diêu, thì tài dễ bị hao tán, công việc nhiều sóng gió, dễ vì tiền mà sinh thị phi, kiện tụng, bệnh tật, cô độc." Count: Nếu1 Vũ2 Khúc3 hãm4 ở5 Tý6 Ngọ7 Mão8 Dậu9 hoặc10 rơi11 vào12 Thìn13 Tuất14 thuộc15 Thiên16 La17 Địa18 Võng19 mà20 gặp21 Kình22 Dương23 Đà24 La25 Hỏa26 Tinh27 Linh28 Tinh29 Địa30 Không31 Địa32 Kiếp33 Thiên34 Hình35 Thiên36 Diêu37 thì38 tài39 dễ40 bị41 hao42 tán43 công44 việc45 nhiều46 sóng47 gió48 dễ49 vì50 tiền51 mà52 sinh53 thị54 phi55 kiện56 tụng57 bệnh58 tật59 cô60 độc61. 61.
+Sentence4: "Tam hợp Mệnh Tài Quan nếu có Lộc, Quyền, Khoa thì tài tinh được nâng đỡ, đương số có thể tự dựng cơ nghiệp; xung chiếu từ Di nếu có Thiên Phủ, Thiên Mã, Lộc Tồn thì ra ngoài gặp quý, còn nếu có Sát Hao thì xa xứ vất vả, tiền bạc đến tay khó lâu bền." Count: Tam1 hợp2 Mệnh3 Tài4 Quan5 nếu6 có7 Lộc8 Quyền9 Khoa10 thì11 tài12 tinh13 được14 nâng15 đỡ16 đương17 số18 có19 thể20 tự21 dựng22 cơ23 nghiệp24 xung25 chiếu26 từ27 Di28 nếu29 có30 Thiên31 Phủ32 Thiên33 Mã34 Lộc35 Tồn36 thì37 ra38 ngoài39 gặp40 quý41 còn42 nếu43 có44 Sát45 Hao46 thì47 xa48 xứ49 vất50 vả51 tiền52 bạc53 đến54 tay55 khó56 lâu57 bền58. 58.
+Section total 53+58+61+58=230. Need total 9 sections maybe 1600. This section 230. Need other sections similar 150-190. Total 9*170=1530. Good.
+
+## Tính cách
+Need 4 sentences. Avoid too long? Count maybe.
+S1: "Người Vũ Khúc thủ Mệnh
