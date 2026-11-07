@@ -104,7 +104,7 @@ function renderGrid(){
 }
 
 function openPalace(p){
-  var b=$('#detail');
+  var b=$('#tabDetail');
   var h='<h3>'+p.name+' · '+p.heavenlyStem+' '+p.earthlyBranch+'</h3>';
   p.majorStars.forEach(function(st){
     var bt=st.brightness?(' ('+st.brightness+')'):'', mg=st.mutagen?(' — hóa '+st.mutagen):'';
