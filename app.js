@@ -161,6 +161,26 @@ function showTab(t){
   $('#tabChart').style.display=(t==='chart')?'grid':'none';
   $('#tabDetail').style.display=(t==='detail')?'block':'none';
   $('#tabDv').style.display=(t==='dv')?'block':'none';
+  var pn=$('#tabHn'); if(pn)pn.style.display=(t==='hn')?'block':'none';
+}
+
+// Hạn năm: sao lưu tinh + tứ hóa năm rơi vào cung nào
+function renderHN(year){
+  var h;
+  try{ h=G.horoscope(year+'-06-01'); }catch(e){ h=G.horoscope(G.solarDate); }
+  var y=h.yearly;
+  var mn=y.mutagen||[];
+  function tagStar(s){
+    var i=mn.indexOf(s.name);
+    return i>=0?('<b class="mut">'+s.name+' ('+NHAN[i]+')</b>'):s.name;
+  }
+  var out='<table class="dvt"><tr><th>Cung</th><th>Ứng Hạn (chiếu)</th><th>Sao Hạn năm rơi vào</th></tr>';
+  G.palaces.forEach(function(p,idx){
+    var stars=(y.stars[idx]||[]).map(tagStar).join(', ')||'—';
+    out+='<tr><td>'+p.name+'</td><td>'+y.palaceNames[idx]+'</td><td>'+stars+'</td></tr>';
+  });
+  out+='</table><div class="note">Năm '+y.heavenlyStem+' '+y.earthlyBranch+' ('+year+'). Tứ hóa năm: '+mn.map(function(s,i){return NHAN[i]+'→'+s;}).join(' · ')+'. Xem cung nào có sao đỏ mà luận.</div>';
+  $('#tabHn').innerHTML=out;
 }
 
 function draw(){
@@ -172,6 +192,7 @@ function draw(){
   G=ast;
   renderGrid();
   renderDecadal();
+  renderHN(new Date().getFullYear());
   openPalace(ast.palaces.filter(function(x){return x.name==='Mệnh';})[0]);
   $('#out').hidden=false;
   showTab('chart');
