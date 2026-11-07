@@ -40,6 +40,8 @@ var LUAN={
 'Thiên Quý':'Quý hiển.',
 'Kiếp Sát':'Hao tán, cướp đoạt.',
 'Địa Không':'Không trung gian hư.',
+'Kiếp Sát':'Hao tán, cướp đoạt.',
+'Phượng Các':'Quý hiển, được nể vì.',
 'Tượng_break':'',
 'Kim Thần':'Tai ách.',
 'Thiên Trù':'Lộc trời, ăn lộc.',

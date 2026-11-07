@@ -3,41 +3,39 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Lập lá số Tử Vi Đẩu Số 12 cung đầy đủ sao, tứ hóa, đại vận. Miễn phí, chạy ngay trong trình duyệt.">
 <title>Lá số Tử Vi — lập chi tiết, miễn phí</title>
-<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="app.css?v=4">
 </head>
 <body>
 <header>
   <h1>Lá số Tử Vi Đẩu Số</h1>
-  <p class="tag">Nhập ngày giờ sinh → lá số 12 cung đủ sao, tứ hóa, đại vận, luận giải. Miễn phí.</p>
+  <p class="tag">Nhập ngày giờ sinh → lá số 12 cung đủ sao, tứ hóa, đại vận. Miễn phí.</p>
   <form id="f">
-    <label>Ngày sinh (DL)<input id="d" type="date" required></label>
+    <label>Ngày sinh (DL)<input type="date" id="d" required></label>
     <label>Giờ
       <select id="h"></select>
     </label>
     <label>Giới
-      <select id="g">
-        <option value="male">Nam</option>
-        <option value="female">Nữ</option>
-      </select>
+      <select id="g"><option value="male">Nam</option><option value="female">Nữ</option></select>
     </label>
     <button type="submit">Lập lá số</button>
-    <span class="err" id="err"></span>
   </form>
+  <p id="err" class="err"></p>
 </header>
 
-<div id="out" hidden>
+<main id="out" hidden>
   <div class="tabs">
-    <button class="tabbtn on" data-tab="chart">Lá số 12 cung</button>
-    <button class="tabbtn" data-tab="detail">Luận giải cung chọn</button>
-    <button class="tabbtn" data-tab="dv">Đại vận 12 cung</button>
+    <button class="tabbtn on" data-tab="chart" type="button">Lá số</button>
+    <button class="tabbtn" data-tab="detail" type="button">Luận giải</button>
+    <button class="tabbtn" data-tab="dv" type="button">Đại vận</button>
   </div>
-  <div id="tabChart" class="grid"></div>
-  <div id="tabDetail" class="detail" style="display:none"></div>
-  <div id="tabDv" class="dv" style="display:none"></div>
-</div>
+  <div id="tabChart" class="tabpane on"></div>
+  <div id="tabDetail" class="tabpane pane-detail"></div>
+  <div id="tabDv" class="tabpane"></div>
+</main>
 
 <script src="iztro.min.js"></script>
-<script src="app.js"></script>
+<script src="app.js?v=4"></script>
 </body>
 </html>
