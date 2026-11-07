@@ -155,9 +155,17 @@ function draw(){
 }
 
 document.addEventListener('DOMContentLoaded',function(){
+  var hs=$('#h');
+  var HO=[
+   ['Giờ Tý','00:00–00:59 (Tý sớm)'],['Giờ Sửu','01:00–02:59'],['Giờ Dần','03:00–04:59'],
+   ['Giờ Mão','05:00–06:59'],['Giờ Thìn','07:00–08:59'],['Giờ Tỵ','09:00–10:59'],
+   ['Giờ Ngọ','11:00–12:59'],['Giờ Mùi','13:00–14:59'],['Giờ Thân','15:00–16:59'],
+   ['Giờ Dậu','17:00–18:59'],['Giờ Tuất','19:00–20:59'],['Giờ Hợi','21:00–22:59'],
+   ['Giờ Tý','23:00–23:59 (Tý muộn)']];
+  HO.forEach(function(t,i){var o=document.createElement('option');o.value=i;o.textContent=t[0]+' '+t[1];hs.appendChild(o);});
+  hs.value='7'; // Mùi mặc định
   $('#f').addEventListener('submit',function(e){e.preventDefault();draw();});
   $$('.tabbtn').forEach(function(b){b.onclick=function(){showTab(b.dataset.tab);};});
-  // default: hôm nay
   var n=new Date();
   $('#d').value=n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0')+'-'+String(n.getDate()).padStart(2,'0');
 });
